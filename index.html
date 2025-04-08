@@ -2,56 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Conference ticket generator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+
 </head>
-<body>
+<body class="h-[100vh] bg-MediumGray bg-no-repeat 
+bg-[url(assets/images/pattern-squiggly-line-top.svg),_url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),_url(assets/images/pattern-lines.svg),_url(assets/images/background-mobile.png)]
+bg-[position:right_top_1lh,_bottom_left,_center,_center]
+bg-[size:150px,_400px,_cover,_cover]
+md:bg-[size:300px,_400px,_cover,_cover]
+md:bg-[position:right_top_3lh,_bottom_left,_center,_center]">
 
-  <!-- Form starts -->
-
-  Your Journey to Coding Conf 2025 Starts Here!
-
-  Secure your spot at next year's biggest coding conference.
-
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
-
-  Full Name
-
-  Email Address
-  example@email.com
-
-  GitHub Username
-  @yourusername
-
-  Generate My Ticket
-
-  <!-- Form ends -->
-
-  <!-- Generated tickets starts -->
-
-  Congrats, <!-- Full Name -->! Your ticket is ready.
-
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
-
-  <!-- Generated tickets ends -->
   
+  <main class="flex flex-col text-xl items-center font-Inconsolata text-AlmostWhite m-5">
+    <img src="assets/images/logo-full.svg" class="w-[250px]">
+    
+    <section>
+      <div class="intro p-[1rem] flex flex-col items-center">
+        <h1 class="text-4xl text-white font-bold text-center">Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p class="m-5 text-center">Secure your spot at next year's biggest coding conference.</p>
+      </div>
+
+    <form class="flex flex-col gap-3">
+      <label>Upload Avatar</label>
+      <input type="file" placeholder="Drag and drop or click to upload" class="bg-AlmostWhite/15 border-[1px] border-dashed rounded-xl border-AlmostWhite h-[2lh]">
+    
+      <p role=[alert]>Upload your photo (JPG or PNG, max size: 500KB).</p>
+
+      <label for="FullName">Full Name</label>
+      <input type="text" name="FullName" id="FullName" class="bg-AlmostWhite/15 border-[1px] rounded-xl border-AlmostWhite h-[2lh]">
+
+      <label for="email">Email Address</label>
+      <input type='email' name="email" id="email" placeholder='example@email.com' class="bg-AlmostWhite/15 border-[1px] rounded-xl border-AlmostWhite h-[2lh]">
+
+      <label for="GitHub">GitHub Username</label>
+      <input type="text" name="GitHub" id='GitHub' placeholder='@yourusername' class="bg-AlmostWhite/15 border-[1px] rounded-xl border-AlmostWhite h-[2lh]"></label>
+
+      <button class="bg-Orange rounded-xl h-[2lh] text-DarkBlue font-black">Generate My Ticket</button>
+    </form>
+
+    </section>
+
+    <section class="hidden">
+
+    Congrats, <!-- Full Name -->! Your ticket is ready.
+
+    We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+
+    Coding Conf
+    Jan 31, 2025 / Austin, TX
+
+    </section>
+
+  </main>
+  <footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/DrMetr">DrMetr</a>.
   </div>
+  </footer>
 </body>
 </html>
