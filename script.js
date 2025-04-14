@@ -1,0 +1,6 @@
+const name = document.querySelector("#FullName")
+const email = document.querySelector("#email")
+const github = document.querySelector("#GitHub")
+const avatar = document.querySelector('#avatar')
+const congratsName = document.querySelector('.name')
+const congratsEmail = document.querySelector('.email')

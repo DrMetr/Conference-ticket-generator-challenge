@@ -31,49 +31,76 @@ md:bg-[position:right_top_3lh,_bottom_left,_center,_center]">
   <main class="flex flex-col text-xl items-center font-Inconsolata text-AlmostWhite m-5">
     <img src="assets/images/logo-full.svg" class="w-[250px]">
     
-    <section>
+    <div class="flex flex-col items-center">
+    <section class="from_section hidden">
       <div class="intro p-[1rem] flex flex-col items-center">
         <h1 class="text-4xl text-white font-bold text-center">Your Journey to Coding Conf 2025 Starts Here!</h1>
         <p class="m-5 text-center">Secure your spot at next year's biggest coding conference.</p>
       </div>
 
-    <form class="flex flex-col gap-3">
-      <label>Upload Avatar</label>
-      <input type="file" placeholder="Drag and drop or click to upload" class="bg-AlmostWhite/15 border-[1px] border-dashed rounded-xl border-AlmostWhite h-[2lh]">
-    
-      <p role=[alert]>Upload your photo (JPG or PNG, max size: 500KB).</p>
+    <form class="flex flex-col gap-3 md:max-w-[35vw]">
+      <label for="avatar">Upload Avatar
+      <div class="flex flex-col items-center bg-AlmostWhite/15 border-2 border-dashed rounded-xl border-LightGrey p-3 cursor-pointer">
+        <div class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20">
+          <img src="./assets/images/icon-upload.svg">
+        </div>
+        <p class="text-base">Drag and drop or click to upload</p>
+        <input type="file" name="avatar" id="avatar" class="hidden">
+      </div>
+    </label>
+
+      <p role=[alert] class="text-sm"><img src="assets/images/icon-info.svg" class="block h-[0.8lh] float-left me-2">Upload your photo (JPG or PNG, max size: 500KB).</p>
 
       <label for="FullName">Full Name</label>
-      <input type="text" name="FullName" id="FullName" class="bg-AlmostWhite/15 border-[1px] rounded-xl border-AlmostWhite h-[2lh]">
+      <input type="text" name="FullName" id="FullName" placeholder='John Smith' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh]">
 
       <label for="email">Email Address</label>
-      <input type='email' name="email" id="email" placeholder='example@email.com' class="bg-AlmostWhite/15 border-[1px] rounded-xl border-AlmostWhite h-[2lh]">
+      <input type='email' name="email" id="email" placeholder='example@email.com' class="p-4 bg-LightGrey/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh]">
 
       <label for="GitHub">GitHub Username</label>
-      <input type="text" name="GitHub" id='GitHub' placeholder='@yourusername' class="bg-AlmostWhite/15 border-[1px] rounded-xl border-AlmostWhite h-[2lh]"></label>
+      <input type="text" name="GitHub" id='GitHub' placeholder='@yourusername' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh]"></label>
 
       <button class="bg-Orange rounded-xl h-[2lh] text-DarkBlue font-black">Generate My Ticket</button>
     </form>
 
     </section>
 
-    <section class="hidden">
-
-    Congrats, <!-- Full Name -->! Your ticket is ready.
-
-    We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-
-    Coding Conf
-    Jan 31, 2025 / Austin, TX
+    <section class="ticket flex flex-col items-center">
+      <br>
+      <h1 class="text-4xl text-white font-bold text-center">Congrats,  <span class="name text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-Orange to-white">Full Name</span>! Your ticket is ready.</h1>
+        <br>
+      <p class="w-[80vw]">We've emailed your ticket to <a class="email text-Orange" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&themeRefresh=1">address</a> and will send updates in the run up to the event.</p>
+        <br>
+      <div class="relative w-[90vw] flex flex-col items-center">
+        <img src="./assets/images/pattern-ticket.svg" class="absolute w-[90%]" alt="Ticket">
+        <div class="flex flex-col items-start">
+          <img src="assets/images/logo-full.svg" class="w-[250px]">
+          <div>
+            
+            <p class="text-">Jan 31, 2025 / Austin, TX</p>
+          </div>
+        
+        <br>
+        <div>
+          <img src="./assets/images/image-avatar.jpg" class="avatar_ticket w-[3rem] rounded-xl">
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     </section>
+    </div>
 
   </main>
   <footer>
-  <div class="attribution">
+  <div class="attribution text-AlmostWhite">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/DrMetr">DrMetr</a>.
   </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
