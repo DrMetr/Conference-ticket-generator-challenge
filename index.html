@@ -41,7 +41,7 @@
 
     <form class="flex flex-col gap-3 md:max-w-[35vw]">
       <label for="avatar">Upload Avatar
-      <div class="flex flex-col items-center bg-AlmostWhite/15 border-2 border-dashed rounded-xl border-LightGrey p-3 cursor-pointer">
+      <div class="flex flex-col items-center bg-AlmostWhite/15 border-2 border-dashed rounded-xl border-LightGrey p-3 cursor-pointer hover:bg-AlmostWhite/25">
         <div class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20">
           <img src="./assets/images/icon-upload.svg">
         </div>
@@ -50,18 +50,19 @@
       </div>
     </label>
 
-      <p role=[alert] class="text-sm"><img src="assets/images/icon-info.svg" class="block h-[0.8lh] float-left me-2">Upload your photo (JPG or PNG, max size: 500KB).</p>
+      <p role=[alert] class="text-sm">
+        <img src="assets/images/icon-info.svg" class="block h-[0.8lh] float-left me-2">Upload your photo (JPG or PNG, max size: 500KB).</p>
 
       <label for="FullName">Full Name</label>
-      <input type="text" name="FullName" id="FullName" placeholder='John Smith' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh]">
+      <input type="text" name="FullName" id="FullName" placeholder='John Smith' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh] hover:bg-AlmostWhite/25 cursor-pointer">
 
       <label for="email">Email Address</label>
-      <input type='email' name="email" id="email" placeholder='example@email.com' class="p-4 bg-LightGrey/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh]">
+      <input type='email' name="email" id="email" placeholder='example@email.com' class="p-4 bg-LightGrey/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh] hover:bg-AlmostWhite/25 cursor-pointer">
 
       <label for="GitHub">GitHub Username</label>
-      <input type="text" name="GitHub" id='GitHub' placeholder='@yourusername' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh]"></label>
+      <input type="text" name="GitHub" id='GitHub' placeholder='@yourusername' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh] hover:bg-AlmostWhite/25 cursor-pointer"></label>
 
-      <button class="bg-Orange rounded-xl h-[2lh] text-DarkBlue font-black mt-2">Generate My Ticket</button>
+      <button class="bg-Orange rounded-xl h-[2lh] text-DarkBlue font-black mt-2 hover:bg-OrangeDarker">Generate My Ticket</button>
     </form>
 
     </section>
