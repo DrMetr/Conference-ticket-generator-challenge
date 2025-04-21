@@ -21,18 +21,19 @@
 
 </head>
 <body class="h-[100vh] bg-MediumGray bg-no-repeat 
-bg-[url(assets/images/pattern-squiggly-line-top.svg),_url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),_url(assets/images/pattern-lines.svg),_url(assets/images/background-mobile.png)]
-bg-[position:right_top_1lh,_bottom_left,_center,_center]
-bg-[size:150px,_400px,_cover,_cover]
-md:bg-[size:300px,_400px,_cover,_cover]
-md:bg-[position:right_top_3lh,_bottom_left,_center,_center]">
+              bg-[url(assets/images/pattern-squiggly-line-top.svg),_url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),_url(assets/images/pattern-lines.svg),_url(assets/images/background-mobile.png)]
+              bg-[position:right_top_1lh,_bottom_left,_center,_center]
+              bg-[size:150px,_400px,_cover,_cover]
+              md:bg-[size:300px,_400px,_cover,_cover]
+              md:bg-[position:right_top_3lh,_bottom_left,_center,_center]
+              flex flex-col items-center">
 
   
   <main class="flex flex-col text-xl items-center font-Inconsolata text-AlmostWhite m-5">
-    <img src="assets/images/logo-full.svg" class="w-[250px]">
+    <img src="assets/images/logo-full.svg" class="w-[250px] h-[1lh]">
     
     <div class="flex flex-col items-center">
-    <section class="from_section hidden">
+    <section class="form_section flex flex-col items-center">
       <div class="intro p-[1rem] flex flex-col items-center">
         <h1 class="text-4xl text-white font-bold text-center">Your Journey to Coding Conf 2025 Starts Here!</h1>
         <p class="m-5 text-center">Secure your spot at next year's biggest coding conference.</p>
@@ -60,46 +61,50 @@ md:bg-[position:right_top_3lh,_bottom_left,_center,_center]">
       <label for="GitHub">GitHub Username</label>
       <input type="text" name="GitHub" id='GitHub' placeholder='@yourusername' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh]"></label>
 
-      <button class="bg-Orange rounded-xl h-[2lh] text-DarkBlue font-black">Generate My Ticket</button>
+      <button class="bg-Orange rounded-xl h-[2lh] text-DarkBlue font-black mt-2">Generate My Ticket</button>
     </form>
 
     </section>
 
-    <section class="ticket flex flex-col items-center">
-      <br>
-      <h1 class="text-4xl text-white font-bold text-center">Congrats,  <span class="name text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-Orange to-white">Full Name</span>! Your ticket is ready.</h1>
-        <br>
-      <p class="w-[80vw]">We've emailed your ticket to <a class="email text-Orange" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&themeRefresh=1">address</a> and will send updates in the run up to the event.</p>
-        <br>
-      <div class="relative w-[90vw] flex flex-col items-center">
-        <img src="./assets/images/pattern-ticket.svg" class="absolute w-[90%]" alt="Ticket">
-        <div class="flex flex-col items-start">
-          <img src="assets/images/logo-full.svg" class="w-[250px]">
-          <div>
-            
-            <p class="text-">Jan 31, 2025 / Austin, TX</p>
+    <section class="ticket_section flex flex-col items-center gap-[1lh] mt-[1lh] hidden">
+      <h1 class="text-4xl text-white font-bold text-center">Congrats,  
+        <span class="name text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-Orange to-white">Full Name</span>! 
+        Your ticket is ready.</h1>
+      <p class="w-[75vw] md:w-[50vw] text-center">We've emailed your ticket to 
+        <a class="email text-Orange" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&themeRefresh=1">address</a> 
+        and will send updates in the run up to the event.</p>
+      
+    
+      <div class="ticket flex flex-col items-start w-[340px] h-[200px] md:w-[500px] md:h-[300px] 
+                  bg-[url(./assets/images/pattern-ticket.svg)] bg-contain bg-no-repeat
+                  p-5 relative">
+        <img src="assets/images/logo-full.svg" class="block h-[25px] md:h-[40px]">
+          <p class="text-sm md:text-base font-extralight ms-10">Jan 31, 2025 / Austin, TX</p>
+      
+          <img src="./assets/images/image-avatar.jpg" 
+                class="avatar_ticket absolute w-[3rem] md:w-[5rem] rounded-xl bottom-[60px] md:bottom-[85px]">
+          <div class="absolute bottom-[58px] md:bottom-[100px] left-[80px] md:left-[110px]">
+            <h2 class="name_ticket font-medium md:text-3xl">Johnathan Kristoff</h2>
+            <div class="flex flex-row gap-1">
+              <img src="./assets/images/icon-github.svg">
+              <p class="ticket_github font-light">github</p></div>
           </div>
-        
-        <br>
-        <div>
-          <img src="./assets/images/image-avatar.jpg" class="avatar_ticket w-[3rem] rounded-xl">
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
-      </div>
+
+          <p class="number font-normal text-MediumGray text-4xl md:text-5xl
+          rotate-90 absolute bottom-[100px] left-[260px]
+          md:bottom-[160px] md:left-[390px]">#65160</p>
     </div>
+    
 
     </section>
     </div>
 
   </main>
-  <footer>
-  <div class="attribution text-AlmostWhite">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/DrMetr">DrMetr</a>.
-  </div>
+  <footer class="absolute bottom-0">
+    <div class="attribution text-AlmostWhite">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/DrMetr">DrMetr</a>.
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>
