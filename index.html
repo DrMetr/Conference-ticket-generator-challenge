@@ -23,7 +23,7 @@
 <body class="h-[100vh] bg-MediumGray bg-no-repeat 
               bg-[url(assets/images/pattern-squiggly-line-top.svg),_url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),_url(assets/images/pattern-lines.svg),_url(assets/images/background-mobile.png)]
               bg-[position:right_top_1lh,_bottom_left,_center,_center]
-              bg-[size:150px,_400px,_cover,_cover]
+              bg-[size:150px,_contain,_cover,_cover]
               md:bg-[size:300px,_400px,_cover,_cover]
               md:bg-[position:right_top_3lh,_bottom_left,_center,_center]
               flex flex-col items-center">
@@ -55,12 +55,15 @@
 
       <label for="FullName">Full Name</label>
       <input type="text" name="FullName" id="FullName" placeholder='John Smith' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh] hover:bg-AlmostWhite/25 cursor-pointer">
+      <p class="error errorName text-OrangeDarker text-sm hidden">Please fill that field</p>
 
       <label for="email">Email Address</label>
       <input type='email' name="email" id="email" placeholder='example@email.com' class="p-4 bg-LightGrey/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh] hover:bg-AlmostWhite/25 cursor-pointer">
+      <p class="error errorEmail text-OrangeDarker text-sm hidden">Please enter valid email</p>
 
       <label for="GitHub">GitHub Username</label>
       <input type="text" name="GitHub" id='GitHub' placeholder='@yourusername' class="p-4 bg-AlmostWhite/15 border-[1px] rounded-xl border-LightGrey/20 h-[2lh] hover:bg-AlmostWhite/25 cursor-pointer"></label>
+      <p class="error errorGitHub text-OrangeDarker text-sm hidden">Please fill that field</p>
 
       <button class="bg-Orange rounded-xl h-[2lh] text-DarkBlue font-black mt-2 hover:bg-OrangeDarker">Generate My Ticket</button>
     </form>
@@ -101,7 +104,7 @@
     </div>
 
   </main>
-  <footer class="absolute bottom-0">
+  <footer class="m-1">
     <div class="attribution text-AlmostWhite">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/DrMetr">DrMetr</a>.
